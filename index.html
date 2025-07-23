@@ -1,10 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name Portfolio</title>
+  <style>
+    /* Basic Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: Arial, sans-serif; }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+    header nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    header nav a:hover { color: #000; }
+
+    /* Main Content */
+    main { margin-top: 70px; }
+
+    /* Hero Video Section */
+    .hero {
+      height: calc(100vh - 70px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: #000;
+    }
+    .hero video {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+
+    /* Video Grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+      background: #f5f5f5;
+    }
+    .video-grid video {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is my personal site.</p>
+
+  <header>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#blogs">Blogs</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <video src="videos/hero.mp4" controls muted autoplay loop>
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Grid of Additional Videos -->
+    <section class="video-grid">
+      <video src="videos/video1.mp4" controls muted>
+        Your browser does not support the video tag.
+      </video>
+      <video src="videos/video2.mp4" controls muted>
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
 </body>
 </html>
