@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Yixuan Wang</title>
+  <style>
+    /* Page Background & Font */
+    body {
+      background-color: #f5f2f0;
+      font-family: 'Roboto Slab', serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    /* Header (reuse from index.html) */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #f5f2f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+      z-index: 1000;
+    }
+    .logo { font-size: 1.25rem; font-weight: bold; }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #000; }
+
+    main.about-container {
+      margin: 120px auto 2rem; /* leave space for fixed header */
+      text-align: center;
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+    .about-text {
+      max-width: 50%;
+      margin: 1.5rem auto 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Yixuan Wang</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+    </nav>
+  </header>
+
+  <main class="about-container">
+    <img src="images/profile.jpg" alt="Your Name" class="profile-photo" />
+    <p class="about-text">
+      Hello! I’m Jolyne. 
+    </p>
+  </main>
+
+</body>
+</html>
