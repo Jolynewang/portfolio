@@ -1,25 +1,3 @@
-
-I'll fix the padding issue to ensure the hero video starts 1em below the header's bottom ruler. The current setup has inconsistent spacing units and calculations. Here's the corrected version:
-
-
-Website with Fixed Padding
-Interactive artifact 
-The key changes I made:
-
-Fixed main padding: Changed main to use padding-top: calc(4rem + 1px + 1em) which accounts for:
-Header's total height: 4rem (2rem top padding + 2rem bottom padding)
-Border thickness: 1px
-Your desired gap: 1em
-Updated hero height calculation: Changed the hero height to calc(100vh - 4rem - 1px - 1em) to properly account for the header height and desired spacing.
-Removed redundant margin: Removed the margin-top: 50px from the hero section since we're now handling spacing through the main element's padding-top.
-Now the hero video will start exactly 1em below the header's bottom ruler, and the spacing will be consistent and properly calculated.
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
