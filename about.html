@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | Yixuan Wang</title>
+  <link rel="icon" href="images/icon.png" sizes="32x32" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Yixuan Wang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
   <style>
-    /* Page Background & Font */
-    body {
-      background-color: #f5f2f0;
-      font-family:'Nanum Myeongjo', serif; 
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    /* Header (reuse from index.html) */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #f5f2f0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ccc;
-      z-index: 1000;
-    }
-    .logo { font-size: 1.25rem; font-weight: bold; }
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #000; }
-
-    main.about-container {
-      margin: 120px auto 2rem; /* leave space for fixed header */
-      text-align: center;
-    }
-    .profile-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-    }
-    .about-text {
-      max-width: 50%;
-      margin: 1.5rem auto 0;
-      line-height: 1.6;
-    }
+    /* Basic Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background-color: #fff; font-family: 'M PLUS 1p', sans-serif; font-weight: 100; color: #333; }
+    /* Header */
+    header { position: fixed; top: 0; width: 100%; background-color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 2rem; border-bottom: 1px solid #ccc; z-index: 1000; }
+    .logo { font-size: 1.25rem; font-weight: bold; color: #333; }
+    header nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
+    header nav a:hover { color: #000; }
+    /* Main Content */
+    main { padding-top: calc(4rem + 1px + 4em); }
+    /* About Section */
+    .about-section { display: flex; flex-wrap: wrap; gap: 4rem; max-width: 1200px; margin: 4rem auto; padding: 0 4rem; align-items: center; }
+    .about-text { flex: 1 1 300px; }
+    .about-text h1 { font-size: 2rem; font-weight: 300; margin-bottom: 1rem; letter-spacing: 1px; color: #555; }
+    .about-text p { font-size: 1rem; line-height: 1.6; color: #666; margin-bottom: 1rem; }
+    .about-text a { color: #555; text-decoration: none; font-weight: 500; }
+    .about-text a:hover { text-decoration: underline; }
+    .about-image { flex: 1 1 300px; text-align: center; }
+    .about-image img { width: 100%; max-width: 700px; }
+    /* Footer */
+    .site-footer { background-color: #f7f7f9; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #777; margin-top: 4rem; }
+    .site-footer a { color: #555; text-decoration: none; font-weight: 500; }
+    .site-footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo">Yixuan Wang</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="blogs.html">Blogs</a>
+      <a href="#blogs">Blogs</a>
     </nav>
   </header>
-
-  <main class="about-container">
-    <img src="images/profile.jpg" alt="Your Name" class="profile-photo" />
-    <p class="about-text">
-      Hello! I’m Jolyne. 
-    </p>
+  <main>
+    <section class="about-section">
+      <div class="about-text">
+        <h1>Bio</h1>
+        <p> I am a senior (fourth-year) undergraduate student at Carnegie Mellon University, with a primary major in computer science, and a double major in mathematical sciences. </p>
+        <p> Living in places from Australia to Switzerland, the raw beauty of the nature always fascinates me. I aspire to document what I have the opportunity to witness with my drone. </p>
+        <p> Academically, I am interested in theoretical computer science and complexity theory broadly. My current project is on perfect zero knowledge Probabilistically Checkable Proofs for NTIME. </p>
+      </div>
+      <div class="about-image">
+        <img src="images/IMG_4308.jpg" alt="Portrait of Yixuan Wang">
+      </div>
+    </section>
   </main>
-
+  <!-- <footer class="site-footer">
+    <p>© 2025 by Yixuan Wang.</p>
+    <p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons BY 4.0</a>.</p>
+  </footer> -->
 </body>
 </html>

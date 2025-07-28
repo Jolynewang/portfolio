@@ -8,17 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-  href="https://fonts.googleapis.com/css2?
-        family=Nanum+Myeongjo:wght@400;700&
-        display=swap"
-  rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap"
+    rel="stylesheet">
   <style>
     /* Basic Reset */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { 
       height: 100%; 
-      background-color: #f5f2f0; /* Light neutral background */
-      font-family:'Nanum Myeongjo', serif; /* Use your chosen font */
+      background-color: #fff; /* Light neutral background */
+      font-family: 'M PLUS 1p', sans-serif;
+      font-weight: 100;
       color: #333;
     }
     /* Header */
@@ -26,12 +25,12 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #f5f2f0;
+      background-color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 2rem 2rem;
-      border-bottom: 1px solid #ccc; /* Thin divider line */
+      /* border-bottom: 1px solid #ccc; /* Thin divider line */
       z-index: 1000;
     }
     .logo {
@@ -46,38 +45,76 @@
       font-weight: bold;
       transition: color 0.3s;
     }
-    header nav a:hover { color: #000; }
+    header nav a:hover { color: #000; font-weight: 1000px; }
     /* Main Content */
     main { 
-      padding-top: calc(4rem + 1px + 1em); /* Header padding (2rem top + 2rem bottom) + border (1px) + desired gap (1em) */
+      padding-top: calc(4rem + 1px + 1em); /* Header padding + border + gap */
     }
     /* Hero Video Section */
     .hero {
-      height: calc(100vh - 4rem - 1px - 1em); /* Full viewport minus header height and gap */
+      height: calc(100vh - 4rem - 1px - 1em);
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      background-color: #f5f2f0;
+      background-color: #fff;
     }
     .hero video {
-      height: 100%;
-      width: auto;
+      height: auto;
+      width: 100%;
       object-fit: cover;
+    }
+    /* Portfolio Intro Section */
+    .portfolio-intro {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .portfolio-intro h2 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #555;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+    .portfolio-intro blockquote {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #444;
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      line-height: 1.6;
+    }
+    .portfolio-intro cite {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #555;
+    }
+    .portfolio-intro p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #666;
+      font-weight: 100;
+      margin: 0 auto;
+      max-width: 600px;
     }
     /* Video Grid */
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      padding: 1rem;
-      background: #f5f5f5;
-    }
-    .video-grid video {
-      width: 100%;
-      aspect-ratio: 9/16;
-      object-fit: cover;
-    }
+    .video-showcase { display: flex; gap: 4rem; max-width: 1800px; margin: 5rem auto; padding: 0 1rem; }
+    .column { flex: 1; display: flex; flex-direction: column; gap: 5em; }
+    .video-item video, .youtube-wrapper { width: 100%; aspect-ratio: 16/9; box-shadow: 0 8px 16px rgba(0,0,0,0.1); object-fit: cover; }
+    .youtube-wrapper { position: relative; padding-bottom: 56.25%; overflow: hidden; }
+    .youtube-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .text-block h3 { font-size: 1.5rem; font-weight: 300; text-transform: uppercase; letter-spacing: 2px; color: #555; margin-bottom: 0.5rem; }
+    .text-block p { font-size: 1rem; line-height: 1.6; color: #666; font-weight: 100; }
+
+    .site-footer { background-color: #f7f7f9; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #777;  margin-top: 4rem; }
+    .site-footer a { color: #555; text-decoration: none; font-weight: 500; }
+    .site-footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -95,15 +132,55 @@
         Your browser does not support the video tag.
       </video>
     </section>
+
+    <!-- Portfolio Intro -->
+    <section class="portfolio-intro">
+      <h2>Portfolio</h2>
+      <blockquote>
+        “Beauty is a primeval phenomenon, which itself never makes its appearance, but the reflection of which is visible in a thousand different utterances of the creative mind, and is as various as nature herself.”
+        <cite>— Johann Wolfgang von Goethe</cite>
+      </blockquote>
+
+
+    </section>
+
     <!-- Grid of Additional Videos -->
-    <section class="video-grid">
-      <video src="videos/video1.mp4" controls muted>
-        Your browser does not support the video tag.
-      </video>
-      <video src="videos/video2.mp4" controls muted>
+    <!-- Two-Column Video Showcase -->
+    <section class="video-showcase">
+      <div class="column">
+        <div class="video-item">
+          <video src="videos/dji_fly_20250718_142450_0265_1752942012397_video.mov" controls muted autoplay loop></video>
+        </div>
+        <div class="video-item">
+          <video src="videos/DJI_20250306213601_0066_D.MP4" controls muted autoplay loop></video>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="video-item">
+          <video src="videos/DJI_20250718201930_0257_D.MP4" controls muted autoplay loop></video>
+        </div>
+        <div class="text-block">
+          <h3> Drone Cinematography </h3>
+          <p>To capture the texture of the Earth and rhythm of our hearts.</p>
+        </div>
+        <div class="video-item">
+          <video src="videos/DJI_20250718214126_0278_D.MP4" controls muted autoplay loop></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <video src="videos/bushranger_bay.mp4" controls muted autoplay loop>
         Your browser does not support the video tag.
       </video>
     </section>
   </main>
+  <!-- Footer with Copyright & License -->
+  <footer class="site-footer">
+    <p>© 2025 by Yixuan Wang.</p>
+    <p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons BY 4.0</a>.</p>
+  </footer>
 </body>
 </html>
