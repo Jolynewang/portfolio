@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="images/icon.png" sizes="32x32" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs — Yixuan Wang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background-color: #fff; font-family: 'M PLUS 1p', sans-serif; font-weight: 100; color: #333; }
+
+    /* Header */
+    header { position: fixed; top: 0; width: 100%; background-color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 2rem; border-bottom: 1px solid #ccc; z-index: 1000; }
+    .logo { font-size: 1.25rem; font-weight: bold; color: #333; }
+    header nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
+    header nav a:hover { color: #000; }
+
+    /* Main Content */
+    main { padding-top: calc(4rem + 1px + 4em + 4rem); max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    /* Blog Section - Centered and increased gap */
+    .blog-section { 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 6rem; /* Increased from 4rem for more padding between cards */
+        margin: 12rem auto; /* Added auto for horizontal centering */
+        max-width: 800px; /* Constrain width for better centering */
+        justify-items: center; /* Center individual cards */
+    }
+    
+    .blog-card { 
+        display: flex; 
+        flex-direction: column; 
+        width: 100%; /* Ensure full width within constrained container */
+        max-width: 700px; /* Prevent cards from getting too wide */
+    }
+    
+    .blog-card img { 
+        width: 80%; 
+        height: auto; 
+        display: block; 
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Added smooth hover transition */
+    }
+    
+    /* Elegant image hover effect */
+    .blog-card img:hover {
+        transform: scale(1.02); /* Subtle scale effect */
+        opacity: 0.9; /* Slight opacity change */
+    }
+    
+    .blog-content { margin-top: 1rem; }
+    
+    .blog-content h2 { 
+        font-size: 1.5rem; 
+        font-weight: 300; 
+        margin-bottom: 0.5rem; 
+        letter-spacing: 0.5px; 
+        color: #555; 
+    }
+    
+    .blog-content blockquote { 
+        font-size: 1rem; 
+        font-style: italic; 
+        line-height: 1.6; 
+        color: #666; 
+        margin-bottom: 0.5rem; 
+        quotes: "\201C" "\201D" "\2018" "\2019"; 
+    }
+    
+    .blog-content blockquote::before { content: open-quote; }
+    .blog-content blockquote::after { content: close-quote; }
+    .blog-content time { font-size: 0.875rem; color: #999; }
+
+    /* Remove underlines and default colors on blog links */
+    .blog-card a { text-decoration: none; color: inherit; }
+
+    /* Hover effect specifically on headlines with smooth transition */
+    .blog-content h2 a { 
+        transition: color 0.3s ease !important; /* Smooth color transition */
+        color: #555 !important; /* Ensure consistent base color */
+    }
+    
+    .blog-content h2 a:hover { 
+        color: #b23 !important; /* Red color on hover with higher specificity */
+    }
+
+    /* Alternative approach - if headlines are wrapped in anchor tags */
+    .blog-card a:hover h2 {
+        color: #b23 !important;
+        transition: color 0.3s ease;
+    }
+
+    /* Footer */
+    .site-footer { 
+        background-color: #f7f7f9; 
+        padding: 2rem 1rem; 
+        text-align: center; 
+        font-size: 0.9rem; 
+        color: #777; 
+        margin-top: 4rem; 
+    }
+    
+    .site-footer a { color: #555; text-decoration: none; font-weight: 500; }
+    .site-footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Yixuan Wang</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+    </nav>
+  </header>
+  <main>
+    <section class="blog-section">
+      <!-- Repeat this .blog-card for each blog entry -->
+      <article class="blog-card">
+        <img src="images/blog1.jpg" alt="Blog 1 image">
+        <div class="blog-content">
+          <h2>Meditation Summer 2025</h2>
+          <blockquote> 围在城里的人想逃出来，站在城外的人想冲进去，婚姻也罢、事业也罢，人生的欲望大都如此。 </blockquote>
+          <time datetime="2025-07-20">July 20, 2025</time>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <a href="https://mp.weixin.qq.com/s/1uEVZriVEkG-G4-3F7pQjw"><img src="images/7A57D047-832B-443D-8560-A5021E094FFF.jpg" alt="Blog 3 image"></a>
+        <div class="blog-content">
+          <a href="https://mp.weixin.qq.com/s/1uEVZriVEkG-G4-3F7pQjw"><h2>Meditation Winter 2022</h2></a>
+          <blockquote> 蜉蝣之羽，衣裳楚楚。心之忧矣，於我归处。</blockquote>
+          <time datetime="2022-12-21">December 31, 2022</time>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="images/IMG_9697.jpg" alt="Blog 2 image">
+        <div class="blog-content">
+          <h2>Coming soon... </h2>
+          <blockquote>Something.</blockquote>
+          <time datetime="2025-06-15">June 15, 2025</time>
+        </div>
+      </article>
+
+      <!-- End repeat -->
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>© 2025 by Yixuan Wang.</p>
+    <p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons BY 4.0</a>.</p>
+  </footer>
+</body>
+</html>
