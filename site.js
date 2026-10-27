@@ -9,8 +9,8 @@ filters.forEach(button => button.addEventListener('click', () => {
     filter.setAttribute('aria-pressed', String(selected));
   });
   document.querySelectorAll('[data-category]').forEach(card => {
-    card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter;
-    if (card.hidden) card.querySelector('video')?.pause();
+    card.hidden = card.dataset.category !== button.dataset.filter;
+    if (card.hidden) card.querySelectorAll('video').forEach(video => video.pause());
   });
 }));
 const heroVideo = document.getElementById('hero-video');

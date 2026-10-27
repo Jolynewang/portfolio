@@ -179,9 +179,9 @@ button {
   align-items:center;
 
   font-size:13px;
-  padding:19px 0 10px;
+  padding:10px 0 10px;
 
-  margin-top:12px
+  margin-top:4px
 
 }
 .text-link span {
@@ -624,9 +624,13 @@ details p {
   display:flex;
   justify-content:space-between
 }
+.bio-copy .research-bio {
+  margin-bottom:5px
+}
 .bio-copy .text-link {
   color:var(--accent);
-  margin-top:15px
+  margin-top:0;
+  margin-bottom:40px
 }
 .journal-grid {
   display:grid;
@@ -1022,5 +1026,46 @@ main {
   .hero-bottom {
     width: min(1180px, calc(100% - 112px));
     margin: 0 auto;
+  }
+}
+
+/* Film collection and photography view. */
+[data-category][hidden] {
+  display:none;
+}
+.film-feature {
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:25px;
+  align-items:center;
+}
+.film-feature .quote {
+  margin:0;
+  padding:35px;
+  text-align:left;
+}
+.film-stack {
+  display:grid;
+  gap:35px;
+  min-width:0;
+}
+.photography-placeholder {
+  padding:100px 0;
+  text-align:center;
+  color:var(--muted);
+  font-family:var(--display);
+  font-size:24px;
+}
+@media(max-width:700px) {
+  .film-feature {
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .film-feature .quote {
+    padding:20px 0;
+  }
+  .film-stack {
+    gap:28px;
   }
 }
