@@ -1,63 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/icon.png" sizes="32x32" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Yixuan Wang</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
-  <style>
-    /* Basic Reset */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; background-color: #fff; font-family: 'M PLUS 1p', sans-serif; font-weight: 100; color: #333; }
-    /* Header */
-    header { position: fixed; top: 0; width: 100%; background-color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 2rem; border-bottom: 1px solid #ccc; z-index: 1000; }
-    .logo { font-size: 1.25rem; font-weight: bold; color: #333; }
-    header nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
-    header nav a:hover { color: #000; }
-    /* Main Content */
-    main { padding-top: calc(4rem + 1px + 4em); }
-    /* About Section */
-    .about-section { display: flex; flex-wrap: wrap; gap: 4rem; max-width: 1200px; margin: 4rem auto; padding: 0 4rem; align-items: center; }
-    .about-text { flex: 1 1 300px; }
-    .about-text h1 { font-size: 2rem; font-weight: 300; margin-bottom: 1rem; letter-spacing: 1px; color: #555; }
-    .about-text p { font-size: 1rem; line-height: 1.6; color: #666; margin-bottom: 1rem; }
-    .about-text a { color: #555; text-decoration: none; font-weight: 500; }
-    .about-text a:hover { text-decoration: underline; }
-    .about-image { flex: 1 1 300px; text-align: center; }
-    .about-image img { width: 100%; max-width: 700px; }
-    /* Footer */
-    .site-footer { background-color: #f7f7f9; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #777; margin-top: 4rem; }
-    .site-footer a { color: #555; text-decoration: none; font-weight: 500; }
-    .site-footer a:hover { text-decoration: underline; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090c0e">
+<meta name="description" content="Yixuan Wang, Cambridge PhD student in theoretical computer science, supported by the Cambridge Australia Poynton Scholarship.">
+<title>About — Yixuan Wang</title>
+<link rel="icon" href="images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer>
+</script>
 </head>
 <body>
-  <header>
-    <div class="logo">Yixuan Wang</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="blogs.html">Blogs</a>
-    </nav>
-  </header>
-  <main>
-    <section class="about-section">
-      <div class="about-text">
-        <h1>Bio</h1>
-        <p> I am a fourth-year undergraduate student at Carnegie Mellon University with a primary major in computer science, and a double major in mathematical sciences. </p>
-        <p> Having lived in places from Australia to Switzerland, the raw beauty of the nature always fascinates me. I attempt to document what I have the opportunity to witness through the lens of my drone. </p>
-        <p> Academically, I am interested in complexity theory broadly. My two current projects are on perfect zero knowledge Probabilistically Checkable Proofs for NTIME, and for NP with low soundness error (1/poly), respectively. These projects are supervised by Prof. Alessandro Chiesa at EPFL.</p>
-      </div>
-      <div class="about-image">
-        <img src="images/IMG_4308.jpg" alt="Portrait of Yixuan Wang">
-      </div>
-    </section>
-  </main>
-  <!-- <footer class="site-footer">
-    <p>© 2025 by Yixuan Wang.</p>
-    <p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons BY 4.0</a>.</p>
-  </footer> -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+<a class="wordmark" href="index.html" aria-label="Yixuan Wang home">YW<span class="mark-dot">.</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="index.html#research">Research</a>
+<a href="index.html#films">Films</a>
+<a href="about.html" aria-current="page">About</a>
+<a href="blogs.html">Journal ↗</a>
+</nav>
+<span class="header-location">
+<i class="status-dot">
+</i> Cambridge, UK</span>
+</header>
+<main id="main" class="wrap">
+<div class="page-heading">
+<p class="eyebrow">03 / About</p>
+<h1>Driven by<br>curiosity<span class="accent">.</span>
+</h1>
+</div>
+<section class="bio-grid" aria-label="Biography">
+<div class="bio-copy">
+<p class="lead">I’m Yixuan Wang, a PhD student at the University of Cambridge, exploring the limits of computation.</p>
+<p>I am supervised by <a href="https://www.cst.cam.ac.uk/people/tg508">Prof. Tom Gur</a> and supported by the Cambridge Australia Poynton Scholarship through the <a href="https://www.cambridgetrust.org/">Cambridge Trust</a>.</p>
+<h2>Research & background</h2>
+<p>I am broadly interested in complexity theory, particularly perfect zero-knowledge proofs and probabilistically checkable proofs. My completed projects include <a href="https://arxiv.org/abs/2607.17494">Linear Probing with Non-Greedy Insertions</a> and the unpublished manuscript <em>Perfect Zero-Knowledge PCPs with Low Error</em>.</p>
+<p>Previously, I studied computer science and mathematical sciences at Carnegie Mellon University. My research at EPFL, supervised by Prof. Alessandro Chiesa, explored perfect zero-knowledge probabilistically checkable proofs for NTIME and for NP with low soundness error.</p>
+<h2>Beyond the proofs</h2>
+<p>Having lived in places from Australia to Switzerland, the raw beauty of nature has always fascinated me. I attempt to document what I have the opportunity to witness through the lens of my drone.</p>
+<p>My films bring together documentary and editorial cinematography, with selected works from Britanniahütte, Seven Sisters, Bushranger Bay, and Ticino.</p>
+<a class="text-link" href="index.html#films">Explore the films <span aria-hidden="true">↗</span>
+</a>
+</div>
+<figure class="portrait">
+<img src="assets/IMG_4308.webp" alt="Black-and-white portrait of Yixuan Wang" width="1066" height="1400">
+<figcaption>
+<span>YIXUAN WANG</span>
+<span>RESEARCHER / OBSERVER</span>
+</figcaption>
+</figure>
+</section>
+</main>
+<footer class="site-footer wrap">
+<a class="wordmark" href="index.html">YW<span class="mark-dot">.</span>
+</a>
+<p>© <span data-year>2026</span> Yixuan Wang <span class="footer-divider">/</span>
+<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</p>
+<a href="#main">Back to top ↑</a>
+</footer>
 </body>
 </html>
