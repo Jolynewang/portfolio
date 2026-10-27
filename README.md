@@ -12,7 +12,7 @@ Run `python3 -m http.server 4173` from this directory, then visit http://localho
 - `about.html`: academic background and personal biography.
 - `blogs.html`: the existing journal entries and WeChat link.
 - `styles.css` / `site.js`: shared responsive design, film filters, and motion controls.
-- `assets/`: optimized copies of existing photographs and still frames extracted from the original films. Original media remains in `images/` and `videos/`.
+- `assets/`: optimized copies of the existing photographs, the supplied red-backdrop portrait, and still frames extracted from the original films. Original media remains in `images/` and `videos/`.
 
 The unpublished manuscript is described on the research page but its source is not included. No coauthor list or publication venue is asserted for that project. Add an online link and confirmed authors when available.
 
